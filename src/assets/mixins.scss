@@ -1,0 +1,13 @@
+/// Set the font-size and line-height
+@mixin setTypo ($fsize, $lheight) {
+  font-size: $fsize;
+  line-height: $lheight;
+}
+
+/// Flexbox
+@mixin setFlex ($dir: '', $just: '', $al: '') {
+  display: flex;
+  @if $dir { flex-direction: $dir; }
+  @if $just { justify-content: $just; }
+  @if $al { align-items: $al; }
+}

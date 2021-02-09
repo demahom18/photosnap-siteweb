@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import './mixins.scss';
+
+//Variables
+$primary_dark: black;
+$primary_light: white;
+$secondary: #dfdfdf;
+$accent: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF) ;
+
+*,
+*:before,
+*:after {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+}
+
+
+html {
+  font-family: 'DM Sans', sans-serif;
+};
+
+body { 
+  @include setTypo(15px, 25px); 
+  font-weight: 400;
+}
+h1, h2 { @include setTypo(40px, 48px); }
+h3 { @include setTypo(18px, 25px); }
+h4{ @include setTypo(12px, 16px); }
+
+a { 
+  text-decoration: none;
+  color: inherit;
+}
