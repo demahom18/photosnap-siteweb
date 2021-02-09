@@ -1,12 +1,15 @@
 <template>
-  <div class="home">
-    HOME
-  </div>
+  <nav>
+    Navbar
+  </nav>
 </template>
 
 <script>
-
 export default {
-  name: 'Home'
+
 }
 </script>
+
+<style>
+
+</style>
