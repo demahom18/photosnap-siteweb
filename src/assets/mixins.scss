@@ -5,9 +5,20 @@
 }
 
 /// Flexbox
-@mixin setFlex ($dir: '', $just: '', $al: '') {
+@mixin flexBox ($dir: '', $just: '', $al: '') {
   display: flex;
   @if $dir { flex-direction: $dir; }
   @if $just { justify-content: $just; }
   @if $al { align-items: $al; }
+}
+
+/// Add a drop shadow to an element
+///
+/// @param {*} $col color 
+/// @param {*} $x x direction 
+/// @param {*} $y y direction 
+/// @param {*} $blur blur 
+///
+@mixin d-shadow ($col, $x: 0, $y: 0, $blur: .5rem) {
+  filter: drop-shadow($x $y $blur $col);
 }
