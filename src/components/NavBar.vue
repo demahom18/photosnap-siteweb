@@ -25,14 +25,12 @@ import { ref } from "vue"
 export default {
   setup() {
     const isActive = ref(false)
-
     return { isActive }
   }
 }
 </script>
 
 <style lang="scss">
-
 @import '../assets/mixins.scss';
 @import '../assets/styles.scss';
 
@@ -61,6 +59,7 @@ nav{
     }
   }
 }
+
 .links { @include flexBox(); }
 .link, .btn {
   font-weight: 700;
@@ -85,13 +84,13 @@ nav{
     width:0px;
     height:0;
     opacity:0;
+    padding: 0;
   }
 }
 
 .menu-burger { position: absolute;}
 
-
-@media only screen and (max-width:750px) {
+@media only screen and (max-width:690px) {
   .btn-black {
     opacity:0;
     width:0px;
@@ -103,12 +102,12 @@ nav{
   .links {
     @include flexBox(column, center, center);
     position: absolute;
-    left:0;
+    left:50%;
     padding:32px;
     z-index: -5;
     background: white;
-    transform:translateY(-150px);
-    width:100%;
+    transform:translate(-50%, -150px);
+    width:min(100%, 400px);
     transition: .3s all;
     > * {
       padding: 10px 0;
@@ -131,7 +130,7 @@ nav{
       }
     }
     &.slideDown {
-      transform:translateY(150px);
+      transform:translate(-50%, 150px);
     }
   }
   .menu-burger {
