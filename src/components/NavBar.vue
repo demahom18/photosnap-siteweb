@@ -56,33 +56,35 @@ h1 {
 nav{
   padding: 0 24px;
   position: relative;
-  background: $primary-light;
+  background: white;
   max-height: 72px;
   @include flexBox('', space-around, center);
- 
+  
   svg { 
     margin: 28px 0;
   }
-  .link { 
-    padding: 0 18px; 
-    &:hover {
-      color: $secondary
-    }
-  }
 }
 
-.links { @include flexBox(); }
+.links { 
+  @include flexBox();
+}
 .link, .btn {
   font-weight: 700;
+  cursor:pointer;
   @include setTypo(12px, 16px);
   letter-spacing: 2px;
   transition: all .2s;
+}
+.link {
+  padding: 0 18px;
+  &:hover {
+    color: $secondary
+  }
 }
 
 .btn {
   padding: 12px 24px;
   text-transform: uppercase;
-  cursor:pointer;
   &-black {
     background: $primary_dark;
     color: $primary_light;
@@ -110,24 +112,26 @@ nav{
   nav {
     justify-content: space-between;
   }
+
   .links {
     @include flexBox(column, center, center);
     position: absolute;
+    z-index: 5;
     left:50%;
     padding:32px;
-    z-index: -5;
-    background: white;
-    transform:translate(-50%, -150px);
+    background: $primary-light;
+    transform:translate(-50%, -200px);
     width:min(100%, 400px);
     transition: .3s all;
-    > * {
-      padding: 10px 0;
+    > *:not(.btn-menu-burger) {
+      margin: 10px 0;
       font-size: 15px;
     }
     .btn-menu-burger {
       width:min(80vw, 310px);
       font-size: 15px;
       text-align: center;
+      padding: 10px 0;
       height:auto;
       opacity:1;
       margin-top: 50px;

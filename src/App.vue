@@ -2,7 +2,9 @@
   <div id="nav">
     <NavBar/>
   </div>
-  <router-view/>
+  <div id="page">
+    <router-view/>
+  </div>
 </template>
 <script>
 import NavBar from './components/NavBar.vue'
@@ -11,5 +13,4 @@ export default {
 }
 </script>
 <style lang="scss">
-
 </style>
