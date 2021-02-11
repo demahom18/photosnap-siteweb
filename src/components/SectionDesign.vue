@@ -6,7 +6,7 @@
   >
     <template #image>
       <picture>
-        <source media="(max-width: 400px)" srcset="../assets/img/home/mobile/designed-for-everyone.jpg">
+        <source media="(max-width: 420px)" srcset="../assets/img/home/mobile/designed-for-everyone.jpg">
         <source media="(max-width: 800px)" srcset="../assets/img/home/tablet/designed-for-everyone.jpg">
         <img src="../assets/img/home/desktop/designed-for-everyone.jpg" :alt="blockContent.alt">
       </picture>
@@ -34,5 +34,9 @@ export default {
 <style lang="scss">
 .design {
   max-height:600px;
+}
+
+@media only screen and (max-width:420px){
+  .design { max-width: 100%;}
 }
 </style>

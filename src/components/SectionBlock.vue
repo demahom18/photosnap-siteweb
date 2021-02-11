@@ -59,7 +59,7 @@ export default {
     }
     p {
       padding: 16px 0;
-      opacity:.6
+      opacity:.6;
     }
     
   }
@@ -76,16 +76,37 @@ export default {
   }
 } 
 
-// @media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px){
 
-// .section-block {
+.section-block {
 
-//   .text-wrap {
-//     width: min(60vw, 500px)
-//   }
-//   img { 
-//     width: min(300px, 40vw);
-//   }
-// }
-// }
+  .text-wrap {
+    width: min(60vw, 500px)
+  }
+  img { 
+    width: min(300px, 40vw);
+  }
+}
+}
+
+@media only screen and (max-width:420px) {
+.section-block {
+  flex-direction: column-reverse;
+
+  .text-wrap {
+    width: 100%;
+    padding:0;
+    > * {
+      padding: 33px;
+    }
+  }
+  picture {
+    height:0;
+  }
+  img { 
+    width: 100vw;
+    height: auto;
+  }
+}
+}
 </style>

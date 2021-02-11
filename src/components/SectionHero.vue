@@ -7,7 +7,7 @@
   >
     <template #image>
       <picture>
-        <source media="(max-width: 400px)" srcset="../assets/img/home/mobile/create-and-share.jpg">
+        <source media="(max-width: 420px)" srcset="../assets/img/home/mobile/create-and-share.jpg">
         <source media="(max-width: 800px)" srcset="../assets/img/home/tablet/create-and-share.jpg">
         <img src="../assets/img/home/desktop/create-and-share.jpg" :alt="blockContent.alt">
       </picture>
@@ -40,6 +40,13 @@ export default {
   .text-wrap {
     background: black;
     color:white;
+  }
+}
+
+@media only screen and (max-width:420px) {
+  .hero {
+    padding: 0 0 30px;
+    background: black;
   }
 }
 </style>

@@ -6,7 +6,7 @@
   >
     <template #image>
       <picture>
-        <source media="(max-width: 400px)" srcset="../assets/img/home/mobile/beautiful-stories.jpg">
+        <source media="(max-width: 420px)" srcset="../assets/img/home/mobile/beautiful-stories.jpg">
         <source media="(max-width: 800px)" srcset="../assets/img/home/tablet/beautiful-stories.jpg">
         <!-- <source media="(min-width: 1200px)" srcset="../assets/img/home/tablet/beautiful-stories.jpg"> -->
         <img src="../assets/img/home/desktop/beautiful-stories.jpg" :alt="blockContent.alt">
@@ -37,5 +37,12 @@ export default {
   max-height:600px;
   flex-direction: row-reverse;
   
+}
+
+@media only screen and (max-width:420px) {
+  .story {
+    flex-direction: column-reverse;
+    max-width:100%;
+  }
 }
 </style>
