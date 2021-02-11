@@ -13,4 +13,9 @@ export default {
 }
 </script>
 <style lang="scss">
+#page { 
+  max-width: 1440px;
+  margin: 0 auto;;
+}
+
 </style>

@@ -1,20 +1,18 @@
 <template>
-  <div class="home">
-    <SectionBlock 
-      :title="blockContent.title" 
-      :resume="blockContent.resume" 
-      btnText="View the stories"
-    >
-      <template #image>
-        <picture>
-          <source media="(max-width: 400px)" srcset="../assets/img/home/mobile/beautiful-stories.jpg">
-          <source media="(max-width: 800px)" srcset="../assets/img/home/tablet/beautiful-stories.jpg">
-          <img src="../assets/img/home/desktop/beautiful-stories.jpg" :alt="blockContent.alt">
-        </picture>
-      </template>
-    </SectionBlock>
-    
-  </div>
+  <SectionBlock 
+    :title="blockContent.title" 
+    :resume="blockContent.resume"
+    class="story" 
+  >
+    <template #image>
+      <picture>
+        <source media="(max-width: 400px)" srcset="../assets/img/home/mobile/beautiful-stories.jpg">
+        <source media="(max-width: 800px)" srcset="../assets/img/home/tablet/beautiful-stories.jpg">
+        <!-- <source media="(min-width: 1200px)" srcset="../assets/img/home/tablet/beautiful-stories.jpg"> -->
+        <img src="../assets/img/home/desktop/beautiful-stories.jpg" :alt="blockContent.alt">
+      </picture>
+    </template>
+  </SectionBlock>
 </template>
 
 <script>
@@ -35,5 +33,9 @@ export default {
 }
 </script>
 <style lang="scss">
-
+.story {
+  max-height:600px;
+  flex-direction: row-reverse;
+  
+}
 </style>

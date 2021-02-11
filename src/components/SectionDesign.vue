@@ -1,20 +1,17 @@
 <template>
-  <div class="home">
-    <SectionBlock 
-      :title="blockContent.title" 
-      :resume="blockContent.resume" 
-      btnText="View Stories"
-    >
-      <template #image>
-        <picture>
-          <source media="(max-width: 400px)" srcset="../assets/img/home/mobile/designed-for-everyone.jpg">
-          <source media="(max-width: 800px)" srcset="../assets/img/home/tablet/designed-for-everyone.jpg">
-          <img src="../assets/img/home/desktop/designed-for-everyone.jpg" :alt="blockContent.alt">
-        </picture>
-      </template>
-    </SectionBlock>
-    
-  </div>
+  <SectionBlock 
+    :title="blockContent.title" 
+    :resume="blockContent.resume" 
+    class="design"
+  >
+    <template #image>
+      <picture>
+        <source media="(max-width: 400px)" srcset="../assets/img/home/mobile/designed-for-everyone.jpg">
+        <source media="(max-width: 800px)" srcset="../assets/img/home/tablet/designed-for-everyone.jpg">
+        <img src="../assets/img/home/desktop/designed-for-everyone.jpg" :alt="blockContent.alt">
+      </picture>
+    </template>
+  </SectionBlock>
 </template>
 
 <script>
@@ -35,5 +32,7 @@ export default {
 }
 </script>
 <style lang="scss">
-
+.design {
+  max-height:600px;
+}
 </style>

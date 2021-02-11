@@ -1,20 +1,18 @@
 <template>
-  <div class="home">
-    <SectionBlock 
-      :title="blockContent.title" 
-      :resume="blockContent.resume" 
-      btnText="Get an invite"
-    >
-      <template #image>
-        <picture>
-          <source media="(max-width: 400px)" srcset="../assets/img/home/mobile/create-and-share.jpg">
-          <source media="(max-width: 800px)" srcset="../assets/img/home/tablet/create-and-share.jpg">
-          <img src="../assets/img/home/desktop/create-and-share.jpg" :alt="blockContent.alt">
-        </picture>
-      </template>
-    </SectionBlock>
-    
-  </div>
+  <SectionBlock 
+    :title="blockContent.title" 
+    :resume="blockContent.resume" 
+    btnText="Get an invite"
+    class='hero'
+  >
+    <template #image>
+      <picture>
+        <source media="(max-width: 400px)" srcset="../assets/img/home/mobile/create-and-share.jpg">
+        <source media="(max-width: 800px)" srcset="../assets/img/home/tablet/create-and-share.jpg">
+        <img src="../assets/img/home/desktop/create-and-share.jpg" :alt="blockContent.alt">
+      </picture>
+    </template>
+  </SectionBlock>
 </template>
 
 <script>
@@ -35,5 +33,13 @@ export default {
 }
 </script>
 <style lang="scss">
-
+.hero {
+  path {
+    stroke: white;
+  };
+  .text-wrap {
+    background: black;
+    color:white;
+  }
+}
 </style>
