@@ -10,33 +10,36 @@ const routes = [
   {
     path: "/features",
     name: "Features",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: function() {
-      return import(/* webpackChunkName: "about" */ "../views/Features.vue");
+      return import("../views/Features.vue");
     },
   },
   {
     path: "/pricing",
     name: "Pricing",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: function() {
-      return import(/* webpackChunkName: "about" */ "../views/Pricing.vue");
+      return import("../views/Pricing.vue");
     },
   },
   {
     path: "/stories",
     name: "Stories",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: function() {
-      return import(/* webpackChunkName: "about" */ "../views/Stories.vue");
+      return import("../views/Stories.vue");
     },
   },
+  
+  
+  
+  ,
+  
+  
+  
+  ,
+  
+  
+  
+  ,
 ];
 
 const router = createRouter({

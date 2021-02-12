@@ -9,14 +9,17 @@
     <div class="links" :class="{ slideDown: isActive }">
       <router-link 
         :to="{name: 'Stories' }" 
+        @click="!isActive"
         class="link"
       >STORIES</router-link>
       <router-link 
         :to="{ name: 'Features' }" 
+        @click="!isActive"
         class="link"
       >FEATURES</router-link>
       <router-link 
         :to="{ name: 'Pricing' }" 
+        @click="!isActive"
         class="link"
       >PRICING</router-link> 
       <span class="btn btn-black btn-menu-burger">Get an invite</span>
