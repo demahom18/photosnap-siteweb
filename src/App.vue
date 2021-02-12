@@ -7,11 +7,17 @@
   </div>
 </template>
 <script>
+import { provide } from 'vue'
 import NavBar from './components/NavBar.vue'
+import stories  from './composables/stories'
 export default {
   components: { NavBar },
+  setup() {
+    provide('stories', stories)
+  }
 }
 </script>
+
 <style lang="scss">
 #page { 
   max-width: 1440px;
