@@ -2,6 +2,7 @@
   <div class="story-card">
     <div class="story-infos">
       <div class="text">
+        <span v-if="showDate">{{ myStory.date}}</span>
         <h3>{{ myStory.title }}</h3>
         <p>by {{ myStory.author }}</p>
       </div>
@@ -25,7 +26,7 @@
 </template>
 
 <script>
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import ArrowButton from './ArrowButton.vue'
 export default {
   components: { ArrowButton },
@@ -33,11 +34,16 @@ export default {
     story: {
       type: Object,
       required: true
+    },
+    showDate: {
+      type: Boolean,
+      default: false
     }
   },
+  
   setup(props) {
     const myStory = ref(props.story)
-
+    
     return {
       myStory
     }
@@ -54,20 +60,26 @@ export default {
   color: white;
   transition: .3s;
 
+  p, span {
+    font-size: 13px;
+  }
+
   &:after {
     content: '';
     position:absolute;
     bottom: 0px;
     width: 100%;
+    height: 10px;
+    z-index: -5;
     transform: translateY(-100%);
     background: $accent;
+    transition: .3s;
   }
 
   &:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
 
     &:after {
-      height: 10px;
       transform: translateY(2px);
     }
   }
@@ -104,9 +116,5 @@ export default {
       right: 0;
     }
   }
-
-  // img {
-  //   width: min(375px, 100vw);
-  // }
 }
 </style>

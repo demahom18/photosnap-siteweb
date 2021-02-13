@@ -1,6 +1,6 @@
 <template>
   <div v-for="story in stories" :key="story.title">
-    <StoryCard :story="story"/>
+    <StoryCard :story="story" :showDate="true"/>
   </div>
 </template>
 

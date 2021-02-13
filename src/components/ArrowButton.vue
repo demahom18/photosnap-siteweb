@@ -26,7 +26,7 @@ export default {
 
   &:hover {
     svg { 
-      animation: slide 2s linear infinite;
+      animation: slide 1.2s linear infinite;
     }
   }
 } 

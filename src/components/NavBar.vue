@@ -14,8 +14,8 @@
       >STORIES</router-link>
       <router-link 
         :to="{ name: 'Features' }" 
-        @click="!isActive"
         class="link"
+        @click="!isActive"
       >FEATURES</router-link>
       <router-link 
         :to="{ name: 'Pricing' }" 
@@ -39,6 +39,20 @@ import { ref } from "vue"
 export default {
   setup() {
     const isActive = ref(false)
+
+    const watchBurger = () => {
+      if (isActive) {
+        window.addEventListener('click', e => {
+          let classes =  []
+          e.path.forEach(el =>  el.classList !== undefined 
+            && el.classList.length ? classes.push(el.classList[0]) : '')
+          if (classes.includes('menu-burger'))   return
+          if (!classes.includes('links')) return isActive.value = false
+        })
+      }
+    }
+    watchBurger() 
+
     return { isActive }
   }
 }
