@@ -10,9 +10,8 @@ import StoryCard from '../components/StoryCard.vue'
 export default {
   components: { StoryCard },
   setup() {
-    let stories = inject('stories')
-  console.log(stories)
-    return { stories}
+    const stories = inject('stories')
+    return { stories }
   }
 }
 </script>

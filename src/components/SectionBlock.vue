@@ -4,10 +4,7 @@
       <div>
         <h2>{{ title }}</h2>
         <p>{{ resume }}</p>
-        <span class="btn btn-arrow">
-          {{ btnText }} 
-          <svg width="42" height="12" viewBox="0 0 42 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 7H41.864" stroke="black"/><path d="M35.4282 1L41.4282 7L35.4282 13" stroke="black"/></svg>
-        </span>
+        <ArrowButton :btnText="textButton"/>
       </div>
     </div>
     <div class="img">
@@ -17,7 +14,10 @@
 </template>
 
 <script>
+import { computed } from 'vue'
+import ArrowButton from './ArrowButton.vue'
 export default {
+  components: { ArrowButton },
   props: {
     title: {
       type: String,
@@ -27,7 +27,7 @@ export default {
       type: String,
       required: true
     },
-    btnText: {
+    textButton: {
       type: String,
       default: 'View the stories'
     },
@@ -35,6 +35,10 @@ export default {
       type: Boolean,
       default:false
     }
+  },
+  setup(props) {
+    // const arrowBtnText = props.textButton
+    // () => computed(() => arrowBtnText.value ? arrowBtnText.value : '') 
   }
 }
 </script>
@@ -69,12 +73,7 @@ export default {
   }
 }
 
-.btn-arrow {
-  padding:0;
-  svg {
-    transform: translateY(2px);
-  }
-} 
+
 
 @media only screen and (max-width: 800px){
 

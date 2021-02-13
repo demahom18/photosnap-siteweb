@@ -2,7 +2,7 @@
   <SectionBlock 
     :title="blockContent.title" 
     :resume="blockContent.resume" 
-    btnText="Get an invite"
+    textButton="Get an invite"
     class='hero'
   >
     <template #image>
