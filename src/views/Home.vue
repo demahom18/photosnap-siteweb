@@ -3,7 +3,7 @@
     <SectionHero/>
     <SectionStory/>
     <SectionDesign/>
-    
+    <StoryList/>
   </div>
 </template>
 
@@ -12,9 +12,15 @@
 import SectionDesign from '../components/SectionDesign.vue'
 import SectionHero from '../components/SectionHero.vue'
 import SectionStory from '../components/SectionStory.vue'
+import StoryList from '../components/StoryList.vue'
 export default {
   name: 'Home',
-  components: { SectionDesign, SectionHero, SectionStory },
+  components: { 
+    SectionDesign, 
+    SectionHero, 
+    SectionStory, 
+    StoryList
+  },
   setup() {
     const blockContent = {
       title: 'Create and share your photo stories.',
@@ -26,6 +32,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-
-</style>

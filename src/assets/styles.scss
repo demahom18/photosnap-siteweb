@@ -22,7 +22,9 @@ html {
 };
 
 body { 
-  @include setTypo(15px, 25px); 
+  @include setTypo(15px, 25px);
+  max-width: 1440px;
+  margin:0 auto; 
   font-weight: 400;
 }
 h1, h2 { @include setTypo(40px, 48px); }

@@ -51,7 +51,7 @@ export default {
   max-height:650px;
   .text-wrap {
     padding: 72px 33px;    
-    width: min(610px, 40vw);
+    width: 40vw;
     display: grid;
     place-content: center;
     > * {
@@ -68,7 +68,7 @@ export default {
     
   }
   img { 
-    width: min(830px, 60vw);
+    width: 60vw;
     height:100%;
   }
 }
@@ -78,7 +78,6 @@ export default {
 @media only screen and (max-width: 800px){
 
 .section-block {
-
   .text-wrap {
     width: min(60vw, 500px)
   }

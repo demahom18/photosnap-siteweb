@@ -12,7 +12,7 @@
     <div class="story-img">
       <picture>
         <source 
-          media="(max-width: 420px)" 
+          media="(max-width: 1000px)" 
           :srcset="require(`../assets/img/stories/mobile/${myStory.img}`)"
         >
         <img 
@@ -61,7 +61,7 @@ export default {
   transition: .3s;
 
   p, span {
-    font-size: 13px;
+    font-size: .9em;
   }
 
   &:after {
@@ -85,9 +85,9 @@ export default {
   }
   .story-infos, hr {
     position: absolute;
-    bottom: 40px;
+    bottom: 2.3em;
     width:100%;
-    padding: 0 40px;
+    padding: 0 2.3em;
   }
 
   hr { 
@@ -98,8 +98,8 @@ export default {
 
   h3 { text-transform: initial;}
   .text{
-    padding-bottom: 16px;
-    margin-bottom: 16px;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
   }
 
   .btn { 

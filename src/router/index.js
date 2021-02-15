@@ -11,21 +11,21 @@ const routes = [
     path: "/features",
     name: "Features",
     component: function() {
-      return import("../views/Features.vue");
+      return import(/* webpackChunkName: "features" */ "../views/Features.vue");
     },
   },
   {
     path: "/pricing",
     name: "Pricing",
     component: function() {
-      return import("../views/Pricing.vue");
+      return import(/* webpackChunkName: "pricing" */ "../views/Pricing.vue");
     },
   },
   {
     path: "/stories",
     name: "Stories",
     component: function() {
-      return import("../views/Stories.vue");
+      return import(/* webpackChunkName: "stories" */ "../views/Stories.vue");
     },
   },
   
