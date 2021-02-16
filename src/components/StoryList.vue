@@ -1,6 +1,10 @@
 <template>
   <div class="story-list">
-    <div v-for="story in latestStories" :key="story.title">
+    <div 
+      v-for="(story, index) in latestStories" 
+      :key="story.title"
+      :class="`story${index}`"
+    >
       <StoryCard :story="story"/>
     </div>
   </div>
@@ -35,17 +39,20 @@ export default {
   max-width: 1440px;
   > * {
     width: 375px;
-  }
+    .story-card {
+      margin: 0 auto;
+      min-height:100%;
+    }
 
-  img {
-    // transform: translateY(20px);
+    img {
+       min-height:100%;
+    }
   }
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:900px) {
   .story-list {
     flex-wrap:wrap;
-    // flex-grow: 1;
     .btn-arrow {
       font-size: 12px;
 
@@ -69,15 +76,35 @@ export default {
   }
 }
 
-@media only screen and (max-width:780px) {
+@media only screen and (max-width:820px) {
   .story-list > * {
     max-width: 50%;
+    flex-basis: 410px;
   }
 }
 
-@media only screen and (max-width: 420px) {
+
+@media only screen and (max-width:750px) {
+  .story2, 
+  .story3{
+    transform:translateY(-10px);
+  }
+}
+
+
+@media only screen and (max-width: 450px) {
   .story-list > * {
     max-width: 100%;
+  }
+  .story1{
+    transform:translateY(-10px);
+  }
+  .story2{
+    transform:translateY(-20px);
+  }
+  
+  .story3 {
+    transform:translateY(-30px);
   }
 }
 </style>

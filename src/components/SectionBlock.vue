@@ -71,6 +71,10 @@ export default {
     width: 60vw;
     height:100%;
   }
+
+  .btn-arrow span:after {
+    background: black;
+  }
 }
 
 

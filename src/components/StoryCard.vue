@@ -12,7 +12,7 @@
     <div class="story-img">
       <picture>
         <source 
-          media="(max-width: 1000px)" 
+          media="(max-width: 900px)" 
           :srcset="require(`../assets/img/stories/mobile/${myStory.img}`)"
         >
         <img 

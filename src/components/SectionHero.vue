@@ -41,6 +41,10 @@ export default {
     background: black;
     color:white;
   }
+
+  .btn-arrow span:after {
+    background: white;
+  }
 }
 
 @media only screen and (max-width:420px) {
