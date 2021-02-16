@@ -91,7 +91,6 @@ export default {
       max-width: 410px;
       padding: 0 24px;
     }
-    
   }
 }
 </style>
