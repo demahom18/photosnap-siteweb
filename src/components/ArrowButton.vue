@@ -25,24 +25,15 @@ export default {
     transform: translate(10px, 2px);
   }
 
-  span {width:fit-content;}
-  
-  span:after {
-    content:'';
-    height:2px;
-    background:white;
-    opacity:0;
-    width: 80%;
-    transition: .3s;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
+  span {
+    width:fit-content;
+    border-bottom: 1px solid transparent;
+    
   }
- 
 
-  span:hover:after {
+  span:hover {
     transition: .3s;
-    opacity: .8;
+    border-color: black;
   }
 } 
 

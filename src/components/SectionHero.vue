@@ -42,9 +42,11 @@ export default {
     color:white;
   }
 
-  .btn-arrow span:after {
-    background: white;
+  .btn-arrow span:hover {
+    border-color: white;
   }
+
+  
 }
 
 @media only screen and (max-width:420px) {

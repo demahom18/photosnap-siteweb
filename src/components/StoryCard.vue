@@ -115,6 +115,10 @@ export default {
       position: absolute;
       right: 0;
     }
+
+    span:hover {
+      border-color: white;
+    }
   }
 }
 </style>

@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import { computed } from 'vue'
 import ArrowButton from './ArrowButton.vue'
 export default {
   components: { ArrowButton },
@@ -35,10 +34,6 @@ export default {
       type: Boolean,
       default:false
     }
-  },
-  setup(props) {
-    // const arrowBtnText = props.textButton
-    // () => computed(() => arrowBtnText.value ? arrowBtnText.value : '') 
   }
 }
 </script>
@@ -71,10 +66,6 @@ export default {
     width: 60vw;
     height:100%;
   }
-
-  .btn-arrow span:after {
-    background: black;
-  }
 }
 
 
@@ -92,23 +83,23 @@ export default {
 }
 
 @media only screen and (max-width:420px) {
-.section-block {
-  flex-direction: column-reverse;
+  .section-block {
+    flex-direction: column-reverse;
 
-  .text-wrap {
-    width: 100%;
-    padding:0;
-    > * {
-      padding: 33px;
+    .text-wrap {
+      width: 100%;
+      padding:0;
+      > * {
+        padding: 33px;
+      }
+    }
+    picture {
+      height:0;
+    }
+    img { 
+      width: 100vw;
+      height: auto;
     }
   }
-  picture {
-    height:0;
-  }
-  img { 
-    width: 100vw;
-    height: auto;
-  }
-}
 }
 </style>

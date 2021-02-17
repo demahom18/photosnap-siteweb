@@ -99,6 +99,10 @@ footer {
     svg {
       transform: translateX(2.8rem);
     }
-  }
+    span:hover {
+      transition: .3s;
+      border-color: white;
+    }
+  }  
 }
 </style>
