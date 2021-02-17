@@ -124,7 +124,7 @@ nav{
     justify-content: space-between;
   }
 
-  .links {
+  nav .links {
     @include flexBox(column, center, center);
     position: absolute;
     z-index: 5;

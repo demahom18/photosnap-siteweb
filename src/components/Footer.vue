@@ -44,7 +44,7 @@ export default {
 footer {
   padding: 4rem 6rem;
   background: black;
-  min-height: 250px;
+  min-height: 280px;
   color: white;
   @include flexBox($just:space-between);
 
@@ -57,6 +57,7 @@ footer {
     display: flex;
     max-width: 14ch;
     align-items: center;
+
     h3 {font-size: 1.2rem;}
     svg { transform: translateY(-2px);}
   }
@@ -105,4 +106,62 @@ footer {
     }
   }  
 }
+
+@media only screen and (max-width:880px) {
+  footer{
+    padding: 4rem 4rem;
+
+   .links {
+      transform: translate(30%, 50px);
+      flex-direction: row;
+    
+      > * {
+        margin: 0 6px;
+        font-size: .7rem;
+        letter-spacing: 1.5px;
+      }
+    }
+
+    .logo a h3 { 
+      font-size: 1.1rem;
+      transform: translateX(-10px);
+    }
+  }
+}
+
+@media only screen and (max-width:700px) {
+  footer {
+    @include flexBox(column, center, center);
+    min-height: 530px;
+    padding: 20px;
+    
+    .logo {
+      transform: translateY(-100px);
+    }
+
+    .social {
+      margin: 2rem 0;
+      transform: translate(-15px, -110px);
+    }
+
+    .links {
+      @include flexBox(column, center, center);
+      left:0;
+      background: none;
+      transform: translate(-15px, 20px);
+      > * { 
+        margin: 10px 0;
+        font-size: 1rem;
+      } 
+
+    }
+
+    .right {
+      transform:translateY(120px);
+      svg { transform: translateX(20px);}
+      p { padding-top: 20px;}
+    }
+  }  
+}
+
 </style>
