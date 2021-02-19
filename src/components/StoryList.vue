@@ -79,32 +79,12 @@ export default {
 @media only screen and (max-width:820px) {
   .story-list > * {
     max-width: 50%;
-    // flex-basis: 410px;
   }
 }
-
-
-@media only screen and (max-width:750px) {
-  // .story2, 
-  // .story3{
-  //   transform:translateY(-10px);
-  // }
-}
-
 
 @media only screen and (max-width: 450px) {
   .story-list > * {
     max-width: 100%;
   }
-  // .story1{
-  //   transform:translateY(-10px);
-  // }
-  // .story2{
-  //   transform:translateY(-20px);
-  // }
-  
-  // .story3 {
-  //   transform:translateY(-30px);
-  // }
 }
 </style>

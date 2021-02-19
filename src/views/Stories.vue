@@ -3,15 +3,19 @@
     <div class="featured-story">
       <picture class="img">
         <source 
+          srcset="../assets/img/stories/desktop/moon-of-appalacia.jpg"
+          media="(min-width: 940px)" 
+        >
+        <source 
           srcset="../assets/img/stories/tablet/moon-of-appalacia2.jpg"
           media="(max-width: 940px)" 
         >
         <source 
           srcset="../assets/img/stories/mobile/moon-of-appalacia.jpg"
-          media="(max-width: 375px)" 
+          media="(max-width: 400px)" 
         >
         <img 
-          src="../assets/img/stories/desktop/moon-of-appalacia.jpg" 
+          src="../assets/img/stories/mobile/moon-of-appalacia.jpg" 
           alt="mount appalachia"
         />
       </picture>
@@ -49,10 +53,36 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../assets/mixins.scss';
 
-img {
-  display: block;
+.featured-story {
+  @include flexBox(column)
+}
+.stories {
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media only screen and (max-width:940px) {
+  .stories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width:750px) {
+   .stories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width:480px)  {
+  .stories {
+    grid-template-columns: 1fr;
+   
+   > * {
+     place-self: center;
+   }
+  }
 }
 </style>
