@@ -73,14 +73,14 @@ export default {
     z-index: -5;
     transform: translateY(-100%);
     background: $accent;
-    transition: .3s;
+    transition: .2s;
   }
 
   &:hover {
     transform: translateY(-8px);
 
     &:after {
-      transform: translateY(2px);
+      transform: translateY(8px);
     }
   }
   .story-infos, hr {
