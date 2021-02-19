@@ -58,7 +58,7 @@ export default {
   position: relative;
   width: fit-content;
   color: white;
-  transition:all .3s ease;
+  transition:all .2s ease;
 
   p, span {
     font-size: .9em;
@@ -69,18 +69,18 @@ export default {
     position:absolute;
     bottom: 0px;
     width: 100%;
-    height: 10px;
+    height: 15px;
     z-index: -5;
     transform: translateY(-100%);
     background: $accent;
-    transition: all .3s ease;
+    transition: all .2s ease;
   }
 
   &:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
 
     &:after {
-      transform: translateY(8px);
+      transform: translateY(66%);
     }
   }
   .story-infos, hr {
