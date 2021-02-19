@@ -53,17 +53,52 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../assets/mixins.scss';
 
 .featured-story {
-  @include flexBox(column)
+  @include flexBox(column);
+  
+  div {
+    background:black;
+    color:white;
+    padding: 24px;
+    > * {
+      max-width: 400px;
+      margin: 2rem 0;
+    }
+  }
+
+  .hero-title {
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+  }
+
+  .btn-arrow path { 
+    stroke: white !important;
+  }
+
+  .btn-arrow span:hover {
+    border-color: white;
+  }
+
+  p { opacity: .6}
 }
 .stories {
   display:grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
+
+/**RESPONSIVE */
+@media only screen and (max-width:1100px) {
+  .featured-story div > * {
+    margin:1rem 0;
+  }
+
+}
 @media only screen and (max-width:940px) {
   .stories {
     grid-template-columns: repeat(3, 1fr);
@@ -71,8 +106,23 @@ export default {
 }
 
 @media only screen and (max-width:750px) {
-   .stories {
+  
+  .stories {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .featured-story {
+    position: relative;
+
+    div {
+      position: absolute;
+      background: none;
+      top: 50%;
+      left: 8vw;
+      transform: translateY(-50%);
+    }
   }
 }
 

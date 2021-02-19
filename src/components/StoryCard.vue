@@ -58,7 +58,7 @@ export default {
   position: relative;
   width: fit-content;
   color: white;
-  transition: .3s;
+  transition:all .3s ease;
 
   p, span {
     font-size: .9em;
@@ -73,7 +73,7 @@ export default {
     z-index: -5;
     transform: translateY(-100%);
     background: $accent;
-    transition: .2s;
+    transition: all .3s ease;
   }
 
   &:hover {
