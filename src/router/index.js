@@ -28,18 +28,6 @@ const routes = [
       return import(/* webpackChunkName: "stories" */ "../views/Stories.vue");
     },
   },
-  
-  
-  
-  ,
-  
-  
-  
-  ,
-  
-  
-  
-  ,
 ];
 
 const router = createRouter({

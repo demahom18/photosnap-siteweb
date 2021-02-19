@@ -2,7 +2,7 @@
   <div class="story-card">
     <div class="story-infos">
       <div class="text">
-        <span v-if="showDate">{{ myStory.date}}</span>
+        <span v-if="showDate">{{ myStory.date }}</span>
         <h3>{{ myStory.title }}</h3>
         <p>by {{ myStory.author }}</p>
       </div>
@@ -91,10 +91,10 @@ export default {
   }
 
   hr { 
-      max-width: 80%; 
-      opacity:.6;
-      height: 1px;
-    }
+    max-width: 80%; 
+    opacity:.6;
+    height: 1px;
+  }
 
   h3 { text-transform: initial;}
   .text{

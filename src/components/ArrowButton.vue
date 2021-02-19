@@ -18,7 +18,7 @@ export default {
 
 <style lang="scss">
 .btn-arrow {
-  padding:0;
+  padding:0 !important;
   position: relative;
 
   svg {
@@ -37,15 +37,4 @@ export default {
   }
 } 
 
-@keyframes slide {
-  0% {
-    transform : translate(10px, 2px);
-  }
-  50% {
-    transform : translate(0px, 2px);
-  }
-  100% {
-    transform : translate(10px, 2px);
-  }
-}
 </style>
