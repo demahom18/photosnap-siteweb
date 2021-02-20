@@ -13,14 +13,7 @@ import BottomPage from '../components/BottomPage.vue'
 export default {
   components: { PricingHero, PlanOption, BottomPage },
   setup() {
-    const plans = {
-      names: Object.keys(pricing),
-      descriptions: () => {
-        pricing.forEach(plan => plan.description)
-      },
-      price: { 
-      }
-    }
+    
   }
 }
 </script>
