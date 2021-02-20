@@ -48,12 +48,14 @@
       </div>
     </div>
   </div>
+  <BottomPage />
 </template>
 
 <script>
 import FeaturesHero from '../components/FeaturesHero.vue'
+import BottomPage from '../components/BottomPage.vue'
 export default {
-  components: { FeaturesHero },
+  components: { FeaturesHero, BottomPage },
   setup() {
 
   }
