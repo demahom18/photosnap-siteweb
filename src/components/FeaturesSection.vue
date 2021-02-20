@@ -72,7 +72,9 @@ export default {
       padding-top:2.2rem;
     }
   }
-   
+  
+  p { opacity: .7;}
+  
   svg {margin-bottom: 2.5rem;}
 
   h4 { 

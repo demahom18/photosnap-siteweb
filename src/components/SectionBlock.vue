@@ -4,7 +4,7 @@
       <div>
         <h2>{{ title }}</h2>
         <p>{{ resume }}</p>
-        <ArrowButton :btnText="textButton"/>
+        <ArrowButton v-if="hasButton" :btnText="textButton"/>
       </div>
     </div>
     <div class="img">
@@ -33,6 +33,10 @@ export default {
     isHero: {
       type: Boolean,
       default:false
+    },
+    hasButton: {
+      type:Boolean,
+      default: true
     }
   }
 }
