@@ -115,7 +115,7 @@ nav{
   }
 }
 @media only screen and (max-width:690px) {
-  .btn-black {
+  nav .btn-black {
     opacity:0;
     width:0px;
     height:0;
