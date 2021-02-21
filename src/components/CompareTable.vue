@@ -60,7 +60,7 @@ export default {
     transform: translateX(20px);
     border-bottom: 2px solid rgba($color: #000000, $alpha: .3);
     + th {
-      transform: translateX(10px)
+      transform: translateX(10px);
     }
   }
   td {
@@ -71,6 +71,9 @@ export default {
     font-weight: bold;
     font-size: .75rem;
     letter-spacing: 2px;
+    &:last-child {
+      transform: translateX(40px);
+    }
   }
 }
 </style>

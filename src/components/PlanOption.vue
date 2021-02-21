@@ -7,18 +7,23 @@
     </div>
 
     <div class="plans">
-      <div class="option" v-for="plan in plans" :key="plan[0]">
+      <div 
+        v-for="plan in plans" 
+        :key="plan[0]"
+        class="option" 
+        :class="{ selected: plan[0].toLowerCase() === 'pro' }"
+      >
         <h3>{{ plan[0] }}</h3>
         <span class="description">{{ plan[1].description }}</span>
         <p v-if="!isYearly">
-          <span  class="price">${{ plan[1].price.monthly }}.00</span>
+          <span class="price">${{ plan[1].price.monthly }}.00</span>
           <span>per month</span>
         </p>
         <p v-else>
           <span  class="price">${{ plan[1].price.yearly }}.00</span>
           <span>per year</span>
         </p>
-        <span class="btn btn-black btn-pricing">Pick plan</span>
+        <span @click="setSelected" class="btn btn-black btn-pricing">Pick plan</span>
       </div>
     </div>
   </div>
@@ -39,11 +44,22 @@ export default {
         : isYearly.value = false 
     }
     const plans =  Object.entries(pricing)
+    
+    const setSelected = e => {
+      const options = document.getElementsByClassName('option')
+
+      //remove the selected class on every elements
+      Array.from(options).forEach(opt => opt.classList.remove('selected'))
+
+      //add selected class on the element clicked
+      e.target.parentElement.classList.add('selected')
+    }
 
     return {
       plans,  
       isYearly, 
-      getCheckValue 
+      setSelected, 
+      getCheckValue,
     }
   }
 }
@@ -83,11 +99,23 @@ export default {
     .option {
       height: 410px;
       background: $secondary;
+      transition: all .3s ease-out;
       max-width: 350px;
       flex-basis: 350px;
       @include flexBox(column,$al:center, $just: space-around);
       text-align: center;
       padding: 20px;
+
+      &.selected {
+        background: black;
+        color: white;
+        transform: scale(1.1);
+        transition: all .3s ease-in;
+        .btn {
+          background: $secondary;
+          color: black
+        }
+      }
 
       h3 { 
         text-transform: capitalize;
@@ -148,6 +176,10 @@ export default {
 @media only screen and (max-width:690px) {
   .plan-options {
     margin: 80px 20px;
+
+    .option.selected {
+      transform: scale(1);
+    }
   }
 
   .frequency {

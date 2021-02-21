@@ -78,19 +78,20 @@ nav{
 .link, .btn {
   font-weight: 700;
   cursor:pointer;
-  @include setTypo(12px, 16px);
+  @include setTypo(.8rem, 16px);
   letter-spacing: 2px;
   transition: all .2s;
 }
 .link {
   padding: 0 18px;
+  font-size: 1rem;
   &:hover {
     color: $secondary
   }
 }
 
 .btn {
-  padding: 12px 24px;
+  padding: 1em 2em;
   text-transform: uppercase;
   &-black {
     background: $primary_dark;
@@ -112,6 +113,10 @@ nav{
 @media only screen and (max-width:800px) {
   .link {
     padding: 0 16px;
+    font-size: .8rem;
+  }
+  nav .btn {
+  font-size: .7rem;
   }
 }
 @media only screen and (max-width:690px) {
