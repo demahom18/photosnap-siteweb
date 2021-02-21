@@ -7,7 +7,7 @@
     </div>
 
     <div class="plans">
-      <div class="option" v-for="plan in plans">
+      <div class="option" v-for="plan in plans" :key="plan[0]">
         <h3>{{ plan[0] }}</h3>
         <span class="description">{{ plan[1].description }}</span>
         <p v-if="!isYearly">
@@ -37,7 +37,6 @@ export default {
       checked === true 
         ? isYearly.value = true 
         : isYearly.value = false 
-      
     }
     const plans =  Object.entries(pricing)
 
@@ -79,7 +78,7 @@ export default {
     gap: 30px;
     
     .description { 
-      opacity: .8;
+      opacity: .7;
     }
     .option {
       height: 410px;
@@ -97,6 +96,8 @@ export default {
       p { 
         @include flexBox(column); 
         gap: 20px;
+
+        span:not(.price) { opacity: .7; }
       }
       .price {
         font-size: 3.7rem;
@@ -136,16 +137,14 @@ export default {
       span + p {
         top: 20%;
         right: 50px;
+        align-items:flex-end;
 
         .price { font-size: 3.2rem;}
-
-        .price + span {
-          transform: translateX(50%)
-        }
       }
     }
   }
  }
+
 @media only screen and (max-width:690px) {
   .plan-options {
     margin: 80px 20px;
@@ -163,6 +162,7 @@ export default {
 
     .option {
       max-width: 100%;
+      flex-basis: 410px;
 
       .description {
         width: min(100%, 400px)
@@ -171,5 +171,4 @@ export default {
     }
   }
 }
-
 </style>
