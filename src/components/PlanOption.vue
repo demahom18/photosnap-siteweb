@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { pricing } from '../composables/pricing'
 import Switcher from './Switcher.vue'
 export default {
@@ -59,7 +59,7 @@ export default {
       plans,  
       isYearly, 
       setSelected, 
-      getCheckValue,
+      getCheckValue
     }
   }
 }
@@ -78,7 +78,7 @@ export default {
       display: block;
     }
     span:not(.slider) { 
-      opacity: .6;
+      opacity: .3;
       font-size: 1.5rem;
       font-weight: bold;
       transition: opacity .5s;
@@ -161,6 +161,7 @@ export default {
 
       .btn {
         top: 70%;
+        transition: .3s all ease-in;
       }
       span + p {
         top: 20%;
