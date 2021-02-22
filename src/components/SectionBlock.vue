@@ -1,14 +1,17 @@
 <template>
-  <section class='section-block'>
+  <section class="section-block">
     <div class="text-wrap">
       <div>
         <h2>{{ title }}</h2>
         <p>{{ resume }}</p>
-        <ArrowButton v-if="hasButton" :btnText="textButton"/>
+        <ArrowButton
+          v-if="hasButton"
+          :btn-text="textButton"
+        />
       </div>
     </div>
     <div class="img">
-      <slot name="image"></slot>
+      <slot name="image" />
     </div>
   </section>
 </template>
@@ -22,7 +25,7 @@ export default {
       type: String,
       required: true
     },
-     resume: {
+    resume: {
       type: String,
       required: true
     },
@@ -32,10 +35,10 @@ export default {
     },
     isHero: {
       type: Boolean,
-      default:false
+      default: false
     },
     hasButton: {
-      type:Boolean,
+      type: Boolean,
       default: true
     }
   }
@@ -49,14 +52,14 @@ export default {
   @include flexBox();
   max-height:650px;
   .text-wrap {
-    padding: 72px 33px;    
+    padding: 72px 33px;
     width: 40vw;
     display: grid;
     place-content: center;
     > * {
       max-width: 400px;
     }
-    h2 { 
+    h2 {
       @include setTypo(32px, 40px);
       letter-spacing: 3.33px;
     }
@@ -64,15 +67,13 @@ export default {
       padding: 16px 0;
       opacity:.6;
     }
-    
+
   }
-  img { 
+  img {
     width: 60vw;
     height:100%;
   }
 }
-
-
 
 @media only screen and (max-width: 800px){
 
@@ -80,7 +81,7 @@ export default {
   .text-wrap {
     width: min(60vw, 500px)
   }
-  img { 
+  img {
     width: min(300px, 40vw);
   }
 }
@@ -100,7 +101,7 @@ export default {
     picture {
       height:0;
     }
-    img { 
+    img {
       width: 100vw;
       height: auto;
     }

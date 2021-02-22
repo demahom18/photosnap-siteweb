@@ -1,25 +1,24 @@
 <template>
   <div class="story-list">
-    <div 
-      v-for="(story, index) in latestStories" 
+    <div
+      v-for="(story, index) in latestStories"
       :key="story.title"
       :class="`story${index}`"
     >
-      <StoryCard :story="story"/>
+      <StoryCard :story="story" />
     </div>
   </div>
 </template>
 
 <script>
-import { computed } from "vue"
+import { computed } from 'vue'
 import StoryCard from '../components/StoryCard.vue'
 import stories from '../composables/stories'
 export default {
   components: { StoryCard },
-  setup() {
-
+  setup () {
     const latestStories = computed(() => {
-      let latest = []
+      const latest = []
       for (let i = 0; i < 4; i++) {
         latest.push(stories[i])
       }

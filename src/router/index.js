@@ -3,32 +3,32 @@ import Home from '../views/Home.vue'
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: Home,
+    path: '/',
+    name: 'Home',
+    component: Home
   },
   {
-    path: "/features",
-    name: "Features",
-    component: function() {
-      return import(/* webpackChunkName: "features" */ "../views/Features.vue");
-    },
+    path: '/features',
+    name: 'Features',
+    component: function () {
+      return import(/* webpackChunkName: "features" */ '../views/Features.vue')
+    }
   },
   {
-    path: "/pricing",
-    name: "Pricing",
-    component: function() {
-      return import(/* webpackChunkName: "pricing" */ "../views/Pricing.vue");
-    },
+    path: '/pricing',
+    name: 'Pricing',
+    component: function () {
+      return import(/* webpackChunkName: "pricing" */ '../views/Pricing.vue')
+    }
   },
   {
-    path: "/stories",
-    name: "Stories",
-    component: function() {
-      return import(/* webpackChunkName: "stories" */ "../views/Stories.vue");
-    },
-  },
-];
+    path: '/stories',
+    name: 'Stories',
+    component: function () {
+      return import(/* webpackChunkName: "stories" */ '../views/Stories.vue')
+    }
+  }
+]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

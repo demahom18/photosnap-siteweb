@@ -6,22 +6,21 @@
         <h3>{{ myStory.title }}</h3>
         <p>by {{ myStory.author }}</p>
       </div>
-      <hr> 
-      <ArrowButton btnText="Read the story"/>
+      <hr>
+      <ArrowButton btn-text="Read the story" />
     </div>
     <div class="story-img">
       <picture>
-        <source 
-          media="(max-width: 900px)" 
+        <source
+          media="(max-width: 900px)"
           :srcset="require(`../assets/img/stories/mobile/${myStory.img}`)"
         >
-        <img 
-          :src="require(`../assets/img/stories/desktop/${myStory.img}`)" 
+        <img
+          :src="require(`../assets/img/stories/desktop/${myStory.img}`)"
           :alt="myStory.title"
-        />
+        >
       </picture>
-    </div> 
-    
+    </div>
   </div>
 </template>
 
@@ -40,10 +39,10 @@ export default {
       default: false
     }
   },
-  
-  setup(props) {
+
+  setup (props) {
     const myStory = ref(props.story)
-    
+
     return {
       myStory
     }
@@ -90,8 +89,8 @@ export default {
     padding: 0 2.3em;
   }
 
-  hr { 
-    max-width: 80%; 
+  hr {
+    max-width: 80%;
     opacity:.6;
     height: 1px;
   }
@@ -102,8 +101,8 @@ export default {
     margin-bottom: 1em;
   }
 
-  .btn { 
-    position: relative; 
+  .btn {
+    position: relative;
     display: inline-block;
     width: 100%;
 

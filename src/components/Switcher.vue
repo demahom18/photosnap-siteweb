@@ -1,12 +1,12 @@
 <template>
   <div>
     <label class="switch">
-      <input 
-        type="checkbox" 
+      <input
         v-model="checked"
+        type="checkbox"
         @change="$emit('switched', checked)"
       >
-      <span class="slider round"></span>
+      <span class="slider round" />
     </label>
   </div>
 </template>
@@ -15,9 +15,9 @@
 import { ref } from 'vue'
 export default {
   emits: ['switched'],
-  setup() {
+  setup () {
     const checked = ref(false)
-    
+
     return { checked }
   }
 }

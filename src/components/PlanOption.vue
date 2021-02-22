@@ -2,15 +2,15 @@
   <div class="plan-options">
     <div class="frequency">
       <span :class="{ bold: !isYearly }">Monthly</span>
-      <Switcher @switched="getCheckValue"/>
+      <Switcher @switched="getCheckValue" />
       <span :class="{ bold: isYearly }">Yearly</span>
     </div>
 
     <div class="plans">
-      <div 
-        v-for="plan in plans" 
+      <div
+        v-for="plan in plans"
         :key="plan[0]"
-        class="option" 
+        class="option"
         :class="{ selected: plan[0].toLowerCase() === 'pro' }"
       >
         <h3>{{ plan[0] }}</h3>
@@ -20,45 +20,48 @@
           <span>per month</span>
         </p>
         <p v-else>
-          <span  class="price">${{ plan[1].price.yearly }}.00</span>
+          <span class="price">${{ plan[1].price.yearly }}.00</span>
           <span>per year</span>
         </p>
-        <span @click="setSelected" class="btn btn-black btn-pricing">Pick plan</span>
+        <span
+          class="btn btn-black btn-pricing"
+          @click="setSelected"
+        >Pick plan</span>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import { pricing } from '../composables/pricing'
 import Switcher from './Switcher.vue'
 export default {
   components: { Switcher },
-  setup() {    
+  setup () {
     const isYearly = ref(false)
 
-    const getCheckValue = checked =>{
-      checked === true 
-        ? isYearly.value = true 
-        : isYearly.value = false 
+    const getCheckValue = checked => {
+      checked === true
+        ? isYearly.value = true
+        : isYearly.value = false
     }
-    const plans =  Object.entries(pricing)
-    
+    const plans = Object.entries(pricing)
+
     const setSelected = e => {
       const options = document.getElementsByClassName('option')
 
-      //remove the selected class on every elements
+      // remove the selected class on every elements
       Array.from(options).forEach(opt => opt.classList.remove('selected'))
 
-      //add selected class on the element clicked
+      // add selected class on the element clicked
       e.target.parentElement.classList.add('selected')
     }
 
     return {
-      plans,  
-      isYearly, 
-      setSelected, 
+      plans,
+      isYearly,
+      setSelected,
       getCheckValue
     }
   }
@@ -77,7 +80,7 @@ export default {
       padding: 30px;
       display: block;
     }
-    span:not(.slider) { 
+    span:not(.slider) {
       opacity: .3;
       font-size: 1.5rem;
       font-weight: bold;
@@ -92,8 +95,8 @@ export default {
     @include flexBox($just: center);
     flex-shrink: 2;
     gap: 30px;
-    
-    .description { 
+
+    .description {
       opacity: .7;
     }
     .option {
@@ -117,12 +120,12 @@ export default {
         }
       }
 
-      h3 { 
+      h3 {
         text-transform: capitalize;
         font-size: 1.5rem
       }
-      p { 
-        @include flexBox(column); 
+      p {
+        @include flexBox(column);
         gap: 20px;
 
         span:not(.price) { opacity: .7; }

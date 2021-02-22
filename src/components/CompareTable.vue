@@ -5,14 +5,26 @@
       <thead>
         <tr>
           <th>The Features</th>
-          <th v-for="plan in plans" :key="plan[0]">{{ plan[0] }}</th>
+          <th
+            v-for="plan in plans"
+            :key="plan[0]"
+          >
+            {{ plan[0] }}
+          </th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="feat in features" :key="feat">
+        <tr
+          v-for="feat in features"
+          :key="feat"
+        >
           <td>{{ feat }}</td>
-          <template v-for="plan in plans" :key="plan[0]">
+          <template
+            v-for="plan in plans"
+            :key="plan[0]"
+          >
             <td v-if="plan[1].features.includes(feat)">
+              <!-- eslint-disable -->
               <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.12351L5.62323 13L17 1" stroke="black" stroke-width="2"/></svg>
             </td>
             <td v-else></td>
@@ -38,6 +50,7 @@
                   {{ plan[0] }}
                 </span>
                 <span v-if="plan[1].features.includes(feat)">
+                   <!-- eslint-disable -->
                   <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.12351L5.62323 13L17 1" stroke="black" stroke-width="2"/></svg>
                 </span>
                 <span v-else></span>
@@ -54,13 +67,13 @@
 import { ref } from 'vue'
 import { pricing } from '../composables/pricing'
 export default {
-  setup() {
-    const isMobile = ref() 
-    const plans =  Object.entries(pricing)
+  setup () {
+    const isMobile = ref()
+    const plans = Object.entries(pricing)
     const features = Array.from(plans)[2][1].features
 
     const checkWindowWidth = () => {
-      window.innerWidth > 650 
+      window.innerWidth > 650
         ? isMobile.value = false
         : isMobile.value = true
 
@@ -68,10 +81,10 @@ export default {
     }
 
     checkWindowWidth()
-    window.addEventListener('resize',() => checkWindowWidth())
-    
-    return { 
-      plans, 
+    window.addEventListener('resize', () => checkWindowWidth())
+
+    return {
+      plans,
       features,
       isMobile,
       checkWindowWidth
@@ -91,7 +104,7 @@ export default {
   > * {
     text-align: center;
   }
-  
+
   table {
     width: min(730px, 90vw);
     margin: 50px 0;
@@ -135,7 +148,7 @@ export default {
       div + div {
         @include flexBox($just: space-between);
 
-        div { 
+        div {
           @include flexBox(column, $al: center);
           .plan { opacity: .6 }
         }

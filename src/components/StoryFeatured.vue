@@ -1,33 +1,33 @@
 <template>
   <div class="featured-story">
-      <picture class="img">
-        <source 
-          srcset="../assets/img/stories/desktop/moon-of-appalacia.jpg"
-          media="(min-width: 940px)" 
-        >
-        <source 
-          srcset="../assets/img/stories/tablet/moon-of-appalacia2.jpg"
-          media="(max-width: 940px)" 
-        >
-        <source 
-          srcset="../assets/img/stories/mobile/moon-of-appalacia.jpg"
-          media="(max-width: 400px)" 
-        >
-        <img 
-          src="../assets/img/stories/mobile/moon-of-appalacia.jpg" 
-          alt="mount appalachia"
-        />
-      </picture>
-      <div>
-        <span class="hero-title">Last month's featured story</span>
-        <h2>Hazy Full moon of appalachia</h2>
-        <span>March 2nd 2020 by John Appleseed</span>
-        <p>
-          The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged
-        </p>
-        <ArrowButton btnText="Read the story" />
-      </div>
+    <picture class="img">
+      <source
+        srcset="../assets/img/stories/desktop/moon-of-appalacia.jpg"
+        media="(min-width: 940px)"
+      >
+      <source
+        srcset="../assets/img/stories/tablet/moon-of-appalacia2.jpg"
+        media="(max-width: 940px)"
+      >
+      <source
+        srcset="../assets/img/stories/mobile/moon-of-appalacia.jpg"
+        media="(max-width: 400px)"
+      >
+      <img
+        src="../assets/img/stories/mobile/moon-of-appalacia.jpg"
+        alt="mount appalachia"
+      >
+    </picture>
+    <div>
+      <span class="hero-title">Last month's featured story</span>
+      <h2>Hazy Full moon of appalachia</h2>
+      <span>March 2nd 2020 by John Appleseed</span>
+      <p>
+        The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged
+      </p>
+      <ArrowButton btn-text="Read the story" />
     </div>
+  </div>
 </template>
 
 <script>
@@ -44,7 +44,7 @@ export default {
 
 .featured-story {
   @include flexBox(column);
-  
+
   div {
     background:black;
     color:white;
@@ -62,7 +62,7 @@ export default {
     letter-spacing: 1.4px;
   }
 
-  .btn-arrow path { 
+  .btn-arrow path {
     stroke: white !important;
   }
 

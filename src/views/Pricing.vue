@@ -1,8 +1,8 @@
 <template>
-  <PricingHero class="pricing-hero"/>
-  <PlanOption/>
-  <CompareTable/>
-  <BottomPage/>
+  <PricingHero class="pricing-hero" />
+  <PlanOption />
+  <CompareTable />
+  <BottomPage />
 </template>
 
 <script>
@@ -12,7 +12,7 @@ import PlanOption from '../components/PlanOption.vue'
 import BottomPage from '../components/BottomPage.vue'
 
 export default {
-  components: { PricingHero, PlanOption, BottomPage, CompareTable },
+  components: { PricingHero, PlanOption, BottomPage, CompareTable }
 }
 </script>
 
@@ -21,7 +21,7 @@ export default {
   .text-wrap {
     background:black;
     color:white;
-  }  
+  }
 }
 
 </style>

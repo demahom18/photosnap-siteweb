@@ -1,7 +1,7 @@
 <template>
   <div class="bottom-page">
     <picture>
-      <source 
+      <source
         srcset="../assets/img/shared/mobile/bg-beta.jpg"
         media="(max-width:392px)"
       >
@@ -12,8 +12,10 @@
       <img src="../assets/img/shared/desktop/bg-beta.jpg">
     </picture>
     <div>
-      <h2 class="text">We're in beta. Get your invite today!</h2>
-      <ArrowButton btnText="Get an invite" />
+      <h2 class="text">
+        We're in beta. Get your invite today!
+      </h2>
+      <ArrowButton btn-text="Get an invite" />
     </div>
   </div>
 </template>
@@ -43,15 +45,15 @@ export default {
     @include flexBox($just:space-between,$al:center);
   }
 
-  .text { 
-    max-width: 400px; 
+  .text {
+    max-width: 400px;
     line-height: 3rem
   }
 
   .btn-arrow span:hover {
-    border-color: white;    
+    border-color: white;
   }
-  
+
   path { stroke: white;}
 }
 

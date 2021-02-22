@@ -1,15 +1,24 @@
 <template>
-  <SectionBlock 
-    :title="blockContent.title" 
-    :resume="blockContent.resume" 
-    textButton="Get an invite"
-    class='hero'
+  <SectionBlock
+    :title="blockContent.title"
+    :resume="blockContent.resume"
+    text-button="Get an invite"
+    class="hero"
   >
     <template #image>
       <picture>
-        <source media="(max-width: 420px)" srcset="../assets/img/home/mobile/create-and-share.jpg">
-        <source media="(max-width: 800px)" srcset="../assets/img/home/tablet/create-and-share.jpg">
-        <img src="../assets/img/home/desktop/create-and-share.jpg" :alt="blockContent.alt">
+        <source
+          media="(max-width: 420px)"
+          srcset="../assets/img/home/mobile/create-and-share.jpg"
+        >
+        <source
+          media="(max-width: 800px)"
+          srcset="../assets/img/home/tablet/create-and-share.jpg"
+        >
+        <img
+          src="../assets/img/home/desktop/create-and-share.jpg"
+          :alt="blockContent.alt"
+        >
       </picture>
     </template>
   </SectionBlock>
@@ -21,7 +30,7 @@ import SectionBlock from './SectionBlock.vue'
 export default {
   name: 'Home',
   components: { SectionBlock },
-  setup() {
+  setup () {
     const blockContent = {
       title: 'Create and share your photo stories.',
       resume: 'Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.',
@@ -46,7 +55,6 @@ export default {
     border-color: white;
   }
 
-  
 }
 
 @media only screen and (max-width:420px) {

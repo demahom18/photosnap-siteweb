@@ -1,24 +1,30 @@
 <template>
-  <div class='stories-page'>
+  <div class="stories-page">
     <StoryFeatured />
     <div class="stories">
-      <template v-for="story in stories" :key="story.title">
-        <StoryCard :story="story" :showDate="true"/>  
+      <template
+        v-for="story in stories"
+        :key="story.title"
+      >
+        <StoryCard
+          :story="story"
+          :show-date="true"
+        />
       </template>
     </div>
   </div>
 </template>
 
 <script>
-import { inject } from "vue"
+import { inject } from 'vue'
 import StoryCard from '../components/StoryCard.vue'
 import StoryFeatured from '../components/StoryFeatured.vue'
 export default {
-  components: { 
+  components: {
     StoryCard,
-    StoryFeatured 
+    StoryFeatured
   },
-  setup() {
+  setup () {
     const stories = inject('stories')
     return { stories }
   }
@@ -47,7 +53,7 @@ export default {
 @media only screen and (max-width:480px)  {
   .stories {
     grid-template-columns: 1fr;
-   
+
     > * {
       place-self: center;
     }

@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <SectionHero/>
-    <SectionStory/>
-    <SectionDesign/>
-    <StoryList/>
+    <SectionHero />
+    <SectionStory />
+    <SectionDesign />
+    <StoryList />
     <FeaturesSection />
   </div>
 </template>
@@ -17,11 +17,11 @@ import SectionHero from '../components/SectionHero.vue'
 import StoryList from '../components/StoryList.vue'
 export default {
   name: 'Home',
-  components: { 
+  components: {
     FeaturesSection,
-    SectionDesign, 
-    SectionStory, 
-    SectionHero, 
+    SectionDesign,
+    SectionStory,
+    SectionHero,
     StoryList
   }
 }
