@@ -2,27 +2,33 @@
   <div class="stories-page">
     <StoryFeatured />
     <div class="stories">
-      <template
-        v-for="story in stories"
-        :key="story.title"
-      >
-        <StoryCard
-          :story="story"
-          :show-date="true"
-        />
-      </template>
+      <GroupTransition>
+        <template
+          v-for="(story, index) in stories"
+          :key="story.title"
+        >
+          <StoryCard
+            :story="story"
+            :show-date="true"
+            :data-index="index"
+          />
+        </template>
+      </GroupTransition>
     </div>
   </div>
 </template>
 
 <script>
 import { inject } from 'vue'
+import GroupTransition from '../components/GroupTransition.vue'
+
 import StoryCard from '../components/StoryCard.vue'
 import StoryFeatured from '../components/StoryFeatured.vue'
 export default {
   components: {
     StoryCard,
-    StoryFeatured
+    StoryFeatured,
+    GroupTransition
   },
   setup () {
     const stories = inject('stories')

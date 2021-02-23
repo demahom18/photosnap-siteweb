@@ -1,21 +1,23 @@
 <template>
-  <div class="story-list">
+  <GroupTransition tag="div">
     <div
       v-for="(story, index) in latestStories"
       :key="story.title"
       :class="`story${index}`"
+      :data-index="index"
     >
       <StoryCard :story="story" />
     </div>
-  </div>
+  </GroupTransition>
 </template>
 
 <script>
 import { computed } from 'vue'
 import StoryCard from '../components/StoryCard.vue'
 import stories from '../composables/stories'
+import GroupTransition from './GroupTransition.vue'
 export default {
-  components: { StoryCard },
+  components: { StoryCard, GroupTransition },
   setup () {
     const latestStories = computed(() => {
       const latest = []
@@ -25,7 +27,9 @@ export default {
       return latest
     })
 
-    return { latestStories }
+    return {
+      latestStories
+    }
   }
 }
 </script>

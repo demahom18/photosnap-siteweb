@@ -18,15 +18,27 @@
         alt="mount appalachia"
       >
     </picture>
-    <div>
-      <span class="hero-title">Last month's featured story</span>
-      <h2>Hazy Full moon of appalachia</h2>
-      <span>March 2nd 2020 by John Appleseed</span>
-      <p>
+    <transition-group
+      name="list"
+      tag="div"
+      appear
+    >
+      <span
+        key="1"
+        class="hero-title"
+      >Last month's featured story</span>
+      <h2 key="2">
+        Hazy Full moon of appalachia
+      </h2>
+      <span key="3">March 2nd 2020 by John Appleseed</span>
+      <p key="5">
         The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged
       </p>
-      <ArrowButton btn-text="Read the story" />
-    </div>
+      <ArrowButton
+        key="6"
+        btn-text="Read the story"
+      />
+    </transition-group>
   </div>
 </template>
 
@@ -93,4 +105,15 @@ export default {
   }
 }
 
+/**Transition */
+.list-enter-from,
+.list-leave-to {
+  opacity: .0;
+  transform: translateY(-30px)
+}
+
+.list-leave-active,
+.list-enter-active {
+  transition: all 1s ease;
+}
 </style>

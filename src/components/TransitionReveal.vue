@@ -1,13 +1,21 @@
 <template>
-  <transition name="reveal">
+  <transition
+    name="reveal"
+    appear
+    mode="out-in"
+  >
     <slot />
   </transition>
 </template>
-<script>
-export default {
 
+<style>
+.reveal-enter-from {
+  opacity: 0;
+  transform: translateY(-50px);
 }
-</script>
-<style lang="scss">
+
+.reveal-enter-active{
+  transition: all 1s;
+}
 
 </style>

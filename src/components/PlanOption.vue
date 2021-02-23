@@ -15,14 +15,19 @@
       >
         <h3>{{ plan[0] }}</h3>
         <span class="description">{{ plan[1].description }}</span>
-        <p v-if="!isYearly">
-          <span class="price">${{ plan[1].price.monthly }}.00</span>
-          <span>per month</span>
-        </p>
-        <p v-else>
-          <span class="price">${{ plan[1].price.yearly }}.00</span>
-          <span>per year</span>
-        </p>
+        <transition
+          name="switch"
+          mode="out-in"
+        >
+          <p v-if="!isYearly">
+            <span class="price">${{ plan[1].price.monthly }}.00</span>
+            <span>per month</span>
+          </p>
+          <p v-else>
+            <span class="price">${{ plan[1].price.yearly }}.00</span>
+            <span>per year</span>
+          </p>
+        </transition>
         <span
           class="btn btn-black btn-pricing"
           @click="setSelected"
@@ -206,5 +211,18 @@ export default {
       .price { font-size: 3.4rem;}
     }
   }
+}
+
+/**Transition */
+
+.switch-enter-from,
+.switch-leave-to {
+  opacity: .0;
+  transform: scale(.8)
+}
+
+.switch-leave-active,
+.switch-enter-active {
+  transition: all .2s ease;
 }
 </style>

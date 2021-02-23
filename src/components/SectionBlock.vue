@@ -1,14 +1,18 @@
 <template>
   <section class="section-block">
     <div class="text-wrap">
-      <div>
-        <h2>{{ title }}</h2>
-        <p>{{ resume }}</p>
-        <ArrowButton
-          v-if="hasButton"
-          :btn-text="textButton"
-        />
-      </div>
+      <TransitionReveal>
+        <div>
+          <TransitionReveal>
+            <h2>{{ title }}</h2>
+          </TransitionReveal>
+          <p>{{ resume }}</p>
+          <ArrowButton
+            v-if="hasButton"
+            :btn-text="textButton"
+          />
+        </div>
+      </TransitionReveal>
     </div>
     <div class="img">
       <slot name="image" />
@@ -18,8 +22,9 @@
 
 <script>
 import ArrowButton from './ArrowButton.vue'
+import TransitionReveal from './TransitionReveal.vue'
 export default {
-  components: { ArrowButton },
+  components: { ArrowButton, TransitionReveal },
   props: {
     title: {
       type: String,
