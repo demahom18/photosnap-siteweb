@@ -66,7 +66,7 @@ h1 {
   width: 1px;
   color: white;
   opacity: 0;
-  position:fixed;
+  position:absolute;
   top:-100%;
 }
 
