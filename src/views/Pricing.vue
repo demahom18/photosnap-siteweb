@@ -1,8 +1,10 @@
 <template>
-  <PricingHero class="pricing-hero" />
-  <PlanOption />
-  <CompareTable />
-  <BottomPage />
+  <div>
+    <PricingHero class="pricing-hero" />
+    <PlanOption />
+    <CompareTable />
+    <BottomPage />
+  </div>
 </template>
 
 <script>

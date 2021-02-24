@@ -18,35 +18,47 @@
         alt="mount appalachia"
       >
     </picture>
-    <transition-group
-      name="list"
+    <GroupTransition
       tag="div"
       appear
     >
       <span
         key="1"
+        data-index="1"
         class="hero-title"
       >Last month's featured story</span>
-      <h2 key="2">
+      <h2
+        key="2"
+        data-index="2"
+      >
         Hazy Full moon of appalachia
       </h2>
-      <span key="3">March 2nd 2020 by John Appleseed</span>
-      <p key="5">
+      <span
+        key="3"
+        data-index="3"
+      >March 2nd 2020 by John Appleseed</span>
+      <p
+        key="4"
+        data-index="4"
+      >
         The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged
       </p>
       <ArrowButton
-        key="6"
+        key="5"
+        data-index="5"
         btn-text="Read the story"
       />
-    </transition-group>
+    </GroupTransition>
   </div>
 </template>
 
 <script>
 import ArrowButton from '../components/ArrowButton.vue'
+import GroupTransition from './GroupTransition.vue'
 export default {
   components: {
-    ArrowButton
+    ArrowButton,
+    GroupTransition
   }
 }
 </script>

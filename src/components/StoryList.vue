@@ -1,5 +1,9 @@
 <template>
-  <GroupTransition tag="div">
+  <GroupTransition
+    tag="div"
+    class="story-list"
+    appear
+  >
     <div
       v-for="(story, index) in latestStories"
       :key="story.title"

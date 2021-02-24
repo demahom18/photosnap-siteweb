@@ -1,7 +1,6 @@
 <template>
   <transition-group
     :tag="tag"
-    appear
     @before-enter="beforeEnter"
     @enter="enter"
   >

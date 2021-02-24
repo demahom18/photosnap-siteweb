@@ -1,18 +1,29 @@
 <template>
   <section class="section-block">
     <div class="text-wrap">
-      <TransitionReveal>
-        <div>
-          <TransitionReveal>
-            <h2>{{ title }}</h2>
-          </TransitionReveal>
-          <p>{{ resume }}</p>
-          <ArrowButton
-            v-if="hasButton"
-            :btn-text="textButton"
-          />
-        </div>
-      </TransitionReveal>
+      <GroupTransition
+        tag="div"
+        appear
+      >
+        <h2
+          key="1"
+          data-index="1"
+        >
+          {{ title }}
+        </h2>
+        <p
+          key="2"
+          data-index="2"
+        >
+          {{ resume }}
+        </p>
+        <ArrowButton
+          v-if="hasButton"
+          key="3"
+          :btn-text="textButton"
+          data-index="3"
+        />
+      </GroupTransition>
     </div>
     <div class="img">
       <slot name="image" />
@@ -22,9 +33,10 @@
 
 <script>
 import ArrowButton from './ArrowButton.vue'
-import TransitionReveal from './TransitionReveal.vue'
+import GroupTransition from './GroupTransition.vue'
+// import TransitionReveal from './TransitionReveal.vue'
 export default {
-  components: { ArrowButton, TransitionReveal },
+  components: { ArrowButton, GroupTransition },
   props: {
     title: {
       type: String,
