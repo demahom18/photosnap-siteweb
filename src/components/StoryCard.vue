@@ -26,7 +26,7 @@
 
 <script>
 import { ref } from 'vue'
-import ArrowButton from './ArrowButton.vue'
+import ArrowButton from './shared/ArrowButton.vue'
 export default {
   components: { ArrowButton },
   props: {

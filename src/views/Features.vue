@@ -84,8 +84,8 @@
 
 <script>
 import FeaturesHero from '../components/FeaturesHero.vue'
-import BottomPage from '../components/BottomPage.vue'
-import GroupTransition from '../components/GroupTransition.vue'
+import BottomPage from '../components/shared/BottomPage.vue'
+import GroupTransition from '../components/shared/GroupTransition.vue'
 export default {
   components: { FeaturesHero, BottomPage, GroupTransition }
 }

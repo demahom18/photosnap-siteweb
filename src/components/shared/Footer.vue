@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss" >
-@import '../assets/mixins.scss';
+@import '../../assets/mixins.scss';
 
 footer {
   padding: 4rem 6rem;

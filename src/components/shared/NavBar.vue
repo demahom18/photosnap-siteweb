@@ -59,8 +59,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/mixins.scss';
-@import '../assets/styles.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/styles.scss';
 
 h1 {
   width: 1px;

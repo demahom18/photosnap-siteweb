@@ -21,7 +21,7 @@
 import { computed, ref } from 'vue'
 import StoryCard from '../components/StoryCard.vue'
 import stories from '../composables/stories'
-import GroupTransition from './GroupTransition.vue'
+import GroupTransition from './shared/GroupTransition.vue'
 export default {
   components: { StoryCard, GroupTransition },
   setup () {

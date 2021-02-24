@@ -53,8 +53,8 @@
 </template>
 
 <script>
-import ArrowButton from '../components/ArrowButton.vue'
-import GroupTransition from './GroupTransition.vue'
+import ArrowButton from './shared/ArrowButton.vue'
+import GroupTransition from './shared/GroupTransition.vue'
 export default {
   components: {
     ArrowButton,

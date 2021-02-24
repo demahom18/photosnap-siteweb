@@ -2,14 +2,14 @@
   <div class="bottom-page">
     <picture>
       <source
-        srcset="../assets/img/shared/mobile/bg-beta.jpg"
+        srcset="../../assets/img/shared/mobile/bg-beta.jpg"
         media="(max-width:392px)"
       >
       <source
-        srcset="../assets/img/shared/tablet/bg-beta.jpg"
+        srcset="../../assets/img/shared/tablet/bg-beta.jpg"
         media="(max-width:780px)"
       >
-      <img src="../assets/img/shared/desktop/bg-beta.jpg">
+      <img src="../../assets/img/shared/desktop/bg-beta.jpg">
     </picture>
     <div>
       <h2 class="text">
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/mixins.scss';
+@import '../../assets/mixins.scss';
 .bottom-page {
   position: relative;
   width: 100%;

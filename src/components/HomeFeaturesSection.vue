@@ -43,7 +43,7 @@
 
 <script>
 import { ref } from 'vue'
-import GroupTransition from './GroupTransition.vue'
+import GroupTransition from './shared/GroupTransition.vue'
 export default {
   components: { GroupTransition },
   setup () {

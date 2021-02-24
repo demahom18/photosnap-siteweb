@@ -1,20 +1,20 @@
 <template>
   <div>
     <PricingHero class="pricing-hero" />
-    <PlanOption />
-    <CompareTable />
+    <PricingPlanOption />
+    <PricingCompareTable />
     <BottomPage />
   </div>
 </template>
 
 <script>
 import PricingHero from '../components/PricingHero.vue'
-import CompareTable from '../components/CompareTable.vue'
-import PlanOption from '../components/PlanOption.vue'
-import BottomPage from '../components/BottomPage.vue'
+import PricingCompareTable from '../components/PricingCompareTable.vue'
+import PricingPlanOption from '../components/PricingPlanOption.vue'
+import BottomPage from '../components/shared/BottomPage.vue'
 
 export default {
-  components: { PricingHero, PlanOption, BottomPage, CompareTable }
+  components: { PricingHero, PricingPlanOption, BottomPage, PricingCompareTable }
 }
 </script>
 

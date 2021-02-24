@@ -2,7 +2,7 @@
   <div class="stories-page">
     <StoryFeatured />
     <div class="stories">
-      <GroupTransition appear>
+      <GroupTransition>
         <template
           v-for="(story, index) in stories"
           :key="story.title"
@@ -20,7 +20,7 @@
 
 <script>
 import { inject } from 'vue'
-import GroupTransition from '../components/GroupTransition.vue'
+import GroupTransition from '../components/shared/GroupTransition.vue'
 import StoryCard from '../components/StoryCard.vue'
 import StoryFeatured from '../components/StoryFeatured.vue'
 export default {
