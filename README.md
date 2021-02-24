@@ -4,7 +4,7 @@
 DEMO WEBSITE [HERE](https://photosnap.netlify.app/pricing).
 ## Preview
 
-![website preview]('./src/assets/img/preview.jpg')
+![website preview](./src/assets/img/preview.jpg)
 ## Project setup
 ```
 npm install
