@@ -39,8 +39,8 @@ export default {
 
     setTimeout(() => {
       const storylist = window.document.querySelector('.story-list')
-
       observer.observe(storylist)
+      if (isVisible.value === true) observer.unobserve(storylist)
     }, 500)
 
     return {

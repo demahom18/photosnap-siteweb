@@ -44,8 +44,8 @@ export default {
 
     setTimeout(() => {
       const design = window.document.querySelector('.design')
-
       observer.observe(design)
+      if (isVisible.value === true) observer.unobserve(design)
     }, 1000)
 
     return { blockContent, isVisible }
