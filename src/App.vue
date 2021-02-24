@@ -3,7 +3,14 @@
     <NavBar />
   </div>
   <div id="page">
-    <router-view />
+    <router-view v-slot="{ Component }">
+      <transition
+        name="route"
+        mode="out-in"
+      >
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
   <Footer />
 </template>
@@ -30,4 +37,17 @@ export default {
   margin: 0 auto;;
 }
 
+/**route transition */
+.route-enter-from {
+  transform: translateX(100%);
+}
+
+.route-enter-active,
+.route-leave-active {
+  transition: transform .5s ease;
+}
+
+.route-leave-to {
+  transform: translateX(-100%);
+}
 </style>
