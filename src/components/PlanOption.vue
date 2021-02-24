@@ -15,7 +15,10 @@
       >
         <h3>{{ plan[0] }}</h3>
         <span class="description">{{ plan[1].description }}</span>
-        <transition name="switch" mode="out-in">
+        <transition
+          name="switch"
+          mode="out-in"
+        >
           <p v-if="!isYearly">
             <span class="price">${{ plan[1].price.monthly }}.00</span>
             <span>per month</span>

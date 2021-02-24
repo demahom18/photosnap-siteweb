@@ -4,25 +4,28 @@
     class="story-list"
     appear
   >
-    <div
-      v-for="(story, index) in latestStories"
-      :key="story.title"
-      :class="`story${index}`"
-      :data-index="index"
-    >
-      <StoryCard :story="story" />
-    </div>
+    <template v-if="isVisible">
+      <div
+        v-for="(story, index) in latestStories"
+        :key="story.title"
+        :class="`story${index}`"
+        :data-index="index"
+      >
+        <StoryCard :story="story" />
+      </div>
+    </template>
   </GroupTransition>
 </template>
 
 <script>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import StoryCard from '../components/StoryCard.vue'
 import stories from '../composables/stories'
 import GroupTransition from './GroupTransition.vue'
 export default {
   components: { StoryCard, GroupTransition },
   setup () {
+    const isVisible = ref()
     const latestStories = computed(() => {
       const latest = []
       for (let i = 0; i < 4; i++) {
@@ -30,8 +33,21 @@ export default {
       }
       return latest
     })
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].intersectionRatio >= 0.2) isVisible.value = true
+    }, { threshold: 0.2 })
 
-    return { latestStories }
+    setTimeout(() => {
+      const storylist = window.document.querySelector('.story-list')
+
+      observer.observe(storylist)
+    }, 500)
+
+    return {
+      latestStories,
+      isVisible,
+      observer
+    }
   }
 }
 </script>

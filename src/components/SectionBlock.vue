@@ -5,24 +5,26 @@
         tag="div"
         appear
       >
-        <h2
-          key="1"
-          data-index="1"
-        >
-          {{ title }}
-        </h2>
-        <p
-          key="2"
-          data-index="2"
-        >
-          {{ resume }}
-        </p>
-        <ArrowButton
-          v-if="hasButton"
-          key="3"
-          :btn-text="textButton"
-          data-index="3"
-        />
+        <template v-if="isVisible">
+          <h2
+            key="1"
+            data-index="1"
+          >
+            {{ title }}
+          </h2>
+          <p
+            key="2"
+            data-index="2"
+          >
+            {{ resume }}
+          </p>
+          <ArrowButton
+            v-if="hasButton"
+            key="3"
+            :btn-text="textButton"
+            data-index="3"
+          />
+        </template>
       </GroupTransition>
     </div>
     <div class="img">
@@ -55,6 +57,11 @@ export default {
     },
     hasButton: {
       type: Boolean,
+      default: true
+    },
+    isVisible: {
+      type: Boolean,
+      required: false,
       default: true
     }
   }

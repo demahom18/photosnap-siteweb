@@ -1,5 +1,6 @@
 <template>
   <SectionBlock
+    :is-visible="isVisible"
     :title="blockContent.title"
     :resume="blockContent.resume"
     class="design"
@@ -24,19 +25,30 @@
 </template>
 
 <script>
-
+import { ref } from 'vue'
 import SectionBlock from './SectionBlock.vue'
 export default {
   name: 'Home',
   components: { SectionBlock },
   setup () {
+    const isVisible = ref(false)
     const blockContent = {
       title: 'Designed for everyone',
       resume: 'Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it. ',
       alt: 'man with a camera'
     }
 
-    return { blockContent }
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].intersectionRatio >= 0.2) isVisible.value = true
+    }, { threshold: 0.2 })
+
+    setTimeout(() => {
+      const design = window.document.querySelector('.design')
+
+      observer.observe(design)
+    }, 1000)
+
+    return { blockContent, isVisible }
   }
 }
 </script>
