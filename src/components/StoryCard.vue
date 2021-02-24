@@ -76,7 +76,7 @@ export default {
   }
 
   &:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) !important;
 
     &:after {
       transform: translateY(66%);
