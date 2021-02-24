@@ -2,6 +2,7 @@
 
 [Front end mentor](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW) advanced challenge
 <br>DEMO WEBSITE [HERE](https://photosnap.netlify.app/pricing).
+
 ## Preview
 
 ![website preview](./src/assets/img/preview.jpg)
