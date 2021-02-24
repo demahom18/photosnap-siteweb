@@ -1,5 +1,10 @@
 # photosnap-site
 
+[Front end mentor](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW) advanced challenge
+DEMO WEBSITE [HERE](https://photosnap.netlify.app/pricing).
+## Preview
+
+![website preview]('./src/assets/img/preview.jpg')
 ## Project setup
 ```
 npm install
@@ -15,5 +20,6 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Deployment
+
+Automatically auto deploy with netlify when commit lands in master.
