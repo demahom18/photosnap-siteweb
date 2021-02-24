@@ -2,7 +2,7 @@
   <div class="stories-page">
     <StoryFeatured />
     <div class="stories">
-      <GroupTransition>
+      <GroupTransition appear>
         <template
           v-for="(story, index) in stories"
           :key="story.title"
