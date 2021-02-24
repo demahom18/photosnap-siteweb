@@ -49,14 +49,17 @@ export default {
   setup () {
     const isVisible = ref(false)
     const observer = new IntersectionObserver(entries => {
-      if (entries[0].intersectionRatio >= 0.2) isVisible.value = true
+      if (entries[0].intersectionRatio >= 0.2) {
+        isVisible.value = true
+      }
     }, { threshold: 0.2 })
 
     setTimeout(() => {
       const features = window.document.querySelector('.features')
-
       observer.observe(features)
+      if (isVisible.value === true) observer.unobserve(features)
     }, 500)
+
     return { isVisible }
   }
 }
