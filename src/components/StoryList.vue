@@ -31,9 +31,7 @@ export default {
       return latest
     })
 
-    return {
-      latestStories
-    }
+    return { latestStories }
   }
 }
 </script>

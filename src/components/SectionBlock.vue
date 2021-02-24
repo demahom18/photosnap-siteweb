@@ -34,7 +34,6 @@
 <script>
 import ArrowButton from './ArrowButton.vue'
 import GroupTransition from './GroupTransition.vue'
-// import TransitionReveal from './TransitionReveal.vue'
 export default {
   components: { ArrowButton, GroupTransition },
   props: {

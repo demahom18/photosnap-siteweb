@@ -31,6 +31,11 @@ export default {
         delay: 0.3 * el.dataset.index,
         onComplete: done
       })
+      // TODO USE DATASET TO SET THE OPACITY
+      // if (el.tagName.toLowerCase() === 'p') {
+      //   el.style.opacity = 0.6
+      //   return el
+      // }
     }
     return {
       beforeEnter,

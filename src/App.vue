@@ -30,4 +30,10 @@ export default {
   margin: 0 auto;;
 }
 
+#nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 90000;
+}
 </style>
