@@ -1,7 +1,7 @@
 # photosnap-site
 
 [Front end mentor](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW) advanced challenge
-<br>DEMO WEBSITE [HERE](https://photosnap.netlify.app/pricing).
+<br>DEMO WEBSITE [HERE](https://photosnap-siteweb.vercel.app).
 
 ## Preview
 
@@ -23,4 +23,4 @@ npm run build
 
 ### Deployment
 
-Automatically auto deploy with netlify when commit lands in master.
+Automatically auto deploy with vercel when commit lands in master.
