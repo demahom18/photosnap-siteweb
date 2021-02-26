@@ -26,6 +26,7 @@ body {
   max-width: 1440px;
   margin:0 auto; 
   font-weight: 400;
+  overflow-x: hidden;
 }
 h1, h2 { @include setTypo(40px, 48px); }
 h3 { @include setTypo(18px, 25px); }
